@@ -1,0 +1,38 @@
+<!-- <div class="card-top containrer-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a >
+                <img src="" alt="">
+            </a>
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+        <div class="item">
+
+        </div>
+    </div>
+</div> -->
+
+<div class="container ">
+    <div class="row d-flex justify-content-center">
+        <ng-container *ngFor="let item of productlist | pipefilter:searchkey:'title' ">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100vh;">
+                    {{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden; text-overflow: ellipsis; max-width: 100vh;">
+                    {{item.description}}</p>
+                <p><strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary btn-sm" (click)="addtocart(item)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<!-- <div ngIf="productlist!includes(searchKey)">
+    <h4>product Not Found</h4>
+</div> -->

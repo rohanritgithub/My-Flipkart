@@ -1,0 +1,82 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-sm-12 col-xs-12 pb-2">
+            <div>
+                <img src="../../assets/flip.png"
+                    class="img-fluid d-flex justify-content-center my-5" width="1000vh" height="auto"
+                    style="background:none" />
+            </div>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner fw-bold">
+                    <div class="carousel-item active">
+                        <p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae,
+                            tempora?</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-primary">Rohan ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+                            ratione.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-warning">Smith ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                            magni?</p>
+                    </div>
+                </div>
+                <!-- <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div> -->
+            </div>
+        </div>
+        <div class="col-lg-5 col-sm-12 col-xs-12">
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <form [formGroup]="loginform">
+                        <div class="row">
+                            <h1 class="fw-bold">Log In </h1>
+                            <span>Login with the data you entered during your registration.</span>&nbsp;
+                            <div class="col-12">
+                                <div class="from-group">
+                                    <label class="fw-bold h6">Login</label>
+                                    <input type="text" placeholder="Login Id" formControlName="email"
+                                        class="form-control" autocomplete="off" [(ngModel)]="email"/>
+                                    <!-- <span *ngIf="email && email.invalid && email.touched" class="text-danger">Email Id
+                                        is required</span> -->
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="fw-bold h6">Password</label>
+                                    <input type="password" placeholder="Password" formControlName="password"
+                                        id="password" class="form-control" autocomplete="off" [(ngModel)]="password" />
+                                    <!-- <span *ngIf="password && password.invalid
+                                     && password.touched" class="errormessage text-start">Password
+                                        is required</span> -->
+                                </div>
+                                <br>
+                            </div>
+                            <div class="offset-lg-3 col-lg-12 justify-content-center">
+                                <div class="form-group">
+                                    <button [disabled]="loginform.invalid"
+                                        class="btn btn-sm btn-primary w-50" (click)="loginproceed()">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <a href="/register" style="text-decoration: none;">Don't have an account? <span class="text-danger">Register Here</span></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="/forgotpwd" style="text-decoration: none;" class="text-danger float-end">Forgot Password ? </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

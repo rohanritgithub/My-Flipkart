@@ -1,0 +1,19 @@
+<!-- Toolbar -->
+<div class="toolbar shadow-sm" role="banner">
+    <i routerLink="/products" style="font-size: 40px; margin-left: 100px;cursor: pointer;" class="fa-solid fa-truck-fast"></i>&nbsp;&nbsp;
+    <strong style="font-size: 20px;">FilpKart</strong>
+      <div class="spacer">
+        <div class="form-group">
+            <input type="text" class="form-control w-50 " (keyup)="search($event)" placeholder="Search product.." [(ngModel)]='searchTerm'>
+            <span class="fas fa-search search-icon"></span>
+        </div>
+      </div>
+      <button routerLink="card" class="btn btn-primary mx-1">
+        <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 10px;" class="badge bg-danger">{{totalitem}}</div>
+      </button>
+      <div>
+        <button class="btn btn-danger btn-sm mx-3" routerLink="login" (click)="logout()">Logout</button>
+      </div>
+  </div>
+  

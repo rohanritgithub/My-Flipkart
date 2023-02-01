@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="text-center fw-bold" >Register Form</h1>
+            <form action="">
+                <div class="form-group">
+                    <label for="" class="form-label">Login Id</label>
+                    <input type="text" class="form-control" name="email" id="" [(ngModel)]="email">
+                </div><br>
+                <div class="form-group">
+                    <label for="" class="form-label">Password</label>
+                    <input type="text" class="form-control" name="password" id="" [(ngModel)]="password">
+                </div><br>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-sm w-50" (click)="register()">Register</button>
+                </div>
+                <div class="row mt-3 d-flex justify-content-center">
+                    <div class="col-md-4">
+                        <a href="/login" style="text-decoration: none;">Have an account</a>
+                    </div>
+                </div>
+            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
